@@ -5,7 +5,7 @@ A easy way to show your custom alert.
 
 
 ## NormalAlertUtils 
-Alert Controller
+Alert Controller, it will allways present alert in front of UIViewcontroller, same display lavel with system alert.
 
 
 ## BasicAlert 
