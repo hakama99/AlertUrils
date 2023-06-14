@@ -9,7 +9,7 @@ Alert Controller, it will allways present alert in front of UIViewcontroller, sa
 
 
 ## BasicAlert 
-A basic class to create a alert with xib.
+A basic class to create a alert with xib, all custom controller should inherit it.
  
     func normalPopview(){
         let alert = NormalTextAlert.init()
