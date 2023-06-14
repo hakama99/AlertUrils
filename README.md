@@ -9,7 +9,7 @@ Alert Controller, it will allways present alert in front of UIViewcontroller, sa
 
 
 ## BasicAlert 
-A basic class to create a alert with xib, all custom controller should inherit it.
+A basic class to create a alert with xib, all custom alert should inherit it.
  
     func normalPopview(){
         let alert = NormalTextAlert.init()
@@ -32,6 +32,20 @@ A basic class to create a alert with xib, all custom controller should inherit i
         alert.addButton(text: "ok", textColor: .blue) {
             //dismiss current alert
             NormalAlertUtils.shared().dismiss(alert: alert)
+        }
+        NormalAlertUtils.shared().show(alert: alert)
+    }
+
+    func textfieldPopview(){
+        let alert = TextfieldPopview.init()
+        alert.titleLabel.text = "input password"
+        alert.setConfirmCb {
+            let password = alert.passwrldTextfield.text!
+            print("input password \(password)")
+            NormalAlertUtils.shared().dismiss()
+        }
+        alert.setCancelCb {
+            NormalAlertUtils.shared().dismiss()
         }
         NormalAlertUtils.shared().show(alert: alert)
     }
